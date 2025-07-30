@@ -57,7 +57,7 @@ class ImageCache
     /**
      * Create a new instance
      */
-    public function __construct(ImageManager $manager = null, Cache $cache = null)
+    public function __construct(?ImageManager $manager = null, ?Cache $cache = null)
     {
         $this->manager = $manager ? $manager : new ImageManager();
 
@@ -291,7 +291,7 @@ class ImageCache
      * @param  bool $returnObj
      * @return mixed
      */
-    public function get($lifetime = null, $returnObj = false)
+    public function get(?$lifetime = null, $returnObj = false)
     {
         $lifetime = is_null($lifetime) ? $this->lifetime : intval($lifetime);
 
