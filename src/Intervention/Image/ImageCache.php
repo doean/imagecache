@@ -291,7 +291,7 @@ class ImageCache
      * @param  bool $returnObj
      * @return mixed
      */
-    public function get(?$lifetime = null, $returnObj = false)
+    public function get($lifetime = null, $returnObj = false)
     {
         $lifetime = is_null($lifetime) ? $this->lifetime : intval($lifetime);
 
